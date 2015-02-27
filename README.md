@@ -1,6 +1,7 @@
-# React Tutorial
+# React tutorial with port to Knockout
 
-This is the React comment box example from [the React tutorial](http://facebook.github.io/react/docs/tutorial.html).
+I re-implemented the React comment box example from [the React tutorial](http://facebook.github.io/react/docs/tutorial.html), using Knockout.js, so I could compare what the Knockout version would look like. 
+
 
 ## To use
 
@@ -35,4 +36,6 @@ php server.php
 go run server.go
 ```
 
-And visit <http://localhost:3000/>. Try opening multiple tabs!
+The original React version is at <http://localhost:3000/>. 
+The Knockout version is at <http://localhost:3000/index-ko.html>. 
+

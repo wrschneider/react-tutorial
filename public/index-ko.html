@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hello Knockout</title>
+	<!-- Not present in the tutorial. Just for basic styling. -->
+	<link rel="stylesheet" href="css/base.css" />
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.3.0/knockout-min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/0.3.1/showdown.min.js"></script>
+</head>
+<body>
+	<div id="content">
+		<div className="commentBox">
+			<h1>Comments</h1>
+			<!-- ko foreach: comments -->
+			<div className="comment">
+				<h2 className="commentAuthor" data-bind="text: author"></h2>
+				<span data-bind="html: $parent.addMarkup(text)" />
+			</div>
+			<!-- /ko -->
+		</div>
+		<form className="commentForm">
+			<input type="text" placeholder="Your name" data-bind="value: author" /> 
+			<input type="text" placeholder="Say something..."
+				data-bind="value: text" /> 
+			<input type="submit" value="Post" data-bind="click: handleSubmit" />
+		</form>
+	</div>
+
+
+	<script src="scripts/example-ko.js"></script>
+</body>
+</html>
